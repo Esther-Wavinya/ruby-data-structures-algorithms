@@ -115,3 +115,63 @@ name = "Odin"
 puts "Hello, #{name}" #=> "Hello, Odin"
 puts 'Hello, #{name}' #=> "Hello, #{name}"
 
+
+
+# Common String Methods
+# There are many useful string methods that are built into Ruby. You need to capitalize a word? No problem! Reverse a string? Easy peasy. Extract the binary subatomic algorithm from any regex grep? We don’t know, but since this is Ruby, let’s go with YES.
+
+# Just remember, strings have loads of methods provided to you for free, and you can find them all in the Ruby docs. If you’re working with strings and need to do something, check the Ruby docs first and see if there’s a method that does it for you.
+
+# Below is a quick recap of the more common string methods you might find yourself using:
+
+#capitalize
+"hello".capitalize #=> "Hello"
+
+#include?
+"hello".include?("lo")  #=> true
+"hello".include?("z")   #=> false
+
+#upcase
+"hello".upcase  #=> "HELLO"
+
+#downcase
+"Hello".downcase  #=> "hello"
+
+#empty?
+"hello".empty?  #=> false
+
+"".empty?       #=> true
+
+#length
+"hello".length  #=> 5
+
+#reverse
+"hello".reverse  #=> "olleh"
+
+#split
+"hello world".split  #=> ["hello", "world"]
+"hello".split("")    #=> ["h", "e", "l", "l", "o"]
+
+#strip
+" hello, world   ".strip  #=> "hello, world"
+
+# The examples below are just to get your creative juices flowing with some of the awesome ways you can modify strings.
+
+"he77o".sub("7", "l")           #=> "hel7o"
+
+"he77o".gsub("7", "l")          #=> "hello"
+
+"hello".insert(-1, " dude")     #=> "hello dude"
+
+"hello world".delete("l")       #=> "heo word"
+
+"!".prepend("hello, ", "world") #=> "hello, world!"
+
+
+# Converting other objects to strings
+# Using the to_s method, you can convert pretty much anything to a string. Here are some examples:
+
+5.to_s        #=> "5"
+nil.to_s      #=> ""
+:symbol.to_s  #=> "symbol"
+
