@@ -175,3 +175,32 @@ puts 'Hello, #{name}' #=> "Hello, #{name}"
 nil.to_s      #=> ""
 :symbol.to_s  #=> "symbol"
 
+# Symbols
+# Symbols are an interesting twist on the idea of a string. The full explanation can be a bit long, but here’s the short version:
+
+# Strings can be changed, so every time a string is used, Ruby has to store it in memory even if an existing string with the same value already exists. Symbols, on the other hand, are stored in memory only once, making them faster in certain situations.
+
+# One common application where symbols are preferred over strings are the keys in hashes. We’ll cover this in detail in the hashes lesson later in the course.
+
+# You won’t need to use symbols much in the beginning, but it’s good to get familiar with what they are and what they look like so that you can recognize them.
+
+# Create a Symbol
+# To create a symbol, simply put a colon at the beginning of some text:
+
+:my_symbol
+
+
+# Symbols vs. Strings
+# To get a better idea of how symbols are stored in memory, give this a whirl in irb or a REPL. The #object_id method returns an integer identifier for an object. (And remember: in Ruby, everything is an object!)
+
+"string" == "string"  #=> true
+"string".object_id == "string".object_id  #=> false
+:symbol.object_id == :symbol.object_id    #=> true
+
+
+# Booleans
+# True and False
+# The Boolean values true and false represent exactly what you think they do: true represents something that is true, and false represents something that is false.
+
+# Nil
+# In Ruby, nil represents “nothing”. Everything in Ruby has a return value. When a piece of code doesn’t have anything to return, it will return nil. 
